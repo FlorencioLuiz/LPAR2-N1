@@ -19,6 +19,3 @@ app.listen(port, () => {
   console.log(`Banco de dados`, dataBase.isInitialized ? 'inicializado' : 'não inicializado')
 })
 
-app.use(cors({
-  origin: ['http://localhost:3000', 'https://meuapp.com']
-}))
