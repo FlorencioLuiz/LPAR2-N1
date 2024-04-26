@@ -3,7 +3,6 @@ console.log('Olá!')
 import express from 'express'
 import dotenv from 'dotenv'
 import dataBase from './database/ormconfig'
-
 import routes from './routes'
 
 dotenv.config()

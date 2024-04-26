@@ -1,7 +1,8 @@
 import { DataSource } from 'typeorm'
 import dotenv from 'dotenv'
+import { join } from 'path'
 
-dotenv.config() // carrega as variáveis de ambiente do arquivo .env
+dotenv.config()
 
 const dataBase = new DataSource({
   type: 'sqlite',
@@ -9,8 +10,8 @@ const dataBase = new DataSource({
   entities: [
     join(__dirname, '..', 'models/*.{ts,js}')
   ],
-  logging: true, // log das queries executadas
-  synchronize: true // cria as tabelas automaticamente
+  logging: true,
+  synchronize: true
 })
 
 dataBase.initialize()
